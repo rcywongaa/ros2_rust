@@ -119,7 +119,8 @@ fn main() {
     println!("cargo:rustc-link-lib=dylib=rcl_yaml_param_parser");
     println!("cargo:rustc-link-lib=dylib=rcutils");
     println!("cargo:rustc-link-lib=dylib=rmw");
-    println!("cargo:rustc-link-lib=dylib=rmw_implementation");
+    // println!("cargo:rustc-link-lib=dylib=rmw_implementation");
+    println!("cargo:rustc-link-lib=dylib=rmw_cyclonedds_cpp"); // spaceros only does not provide the default rmw_implementation
 
     let bindings = builder.generate().expect("Unable to generate bindings");
 
